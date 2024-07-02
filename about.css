@@ -1,0 +1,52 @@
+#hero {
+    background-image: url(/images/aboutushero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero .hero-headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card,
+.card:nth-child(2),
+.card:nth-child(3) {
+    background-color: white;
+    color: black;
+    transition: .2s ease;
+}
+
+.card:nth-child(3) {
+    background-image: none;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+    }
+
+.ourTeam{
+    margin-top: 32px;
+}
+.doctor-card{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    background-color: transparent;
+    width: 300px;
+    box-shadow: 1.5px 1.5px 50px -19px skyblue;
+}
+.doctor-card img{
+    height: 70%;
+    width: 100%;
+    image-rendering:optimizeQuality;
+}
+.doctor-card .doctor-detail .drName{
+    font-size: 20px;
+    color: #031b4e;
+    font-weight: 700;
+}

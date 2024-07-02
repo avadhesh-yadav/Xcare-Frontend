@@ -1,0 +1,1683 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    background-color: #F0F7FD;
+
+}
+button{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+
+}
+
+main {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.btn-smLight {
+    text-transform: uppercase;
+    border: none;
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 8px 18px;
+    color: #3368C6;
+    font-weight: 500;
+    background-color: #F0F7FD;
+    margin-bottom: 1.4rem;
+}
+
+.btnDark {
+    background-color: #031b4e;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 35px;
+    transition: .3s ease-in-out;
+}
+
+.btnDark:hover {
+    background-color: #3368C6;
+}
+
+.btnDark:hover .external-file {
+    animation: fly 1.3s ease-in-out;
+}
+
+
+/* HEADER and NAVBAR */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+
+}
+
+.logo {
+    height: 55px;
+    width: 150px;
+    margin-left: 50px;
+    transition: .3s ease;
+}
+
+.logo:hover {
+    transform: translateY(1%);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 11px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    transition: 0.2s ease;
+}
+
+#navbar li a:hover {
+    color: #3368C6;
+}
+
+#header .navbar-icons {
+    display: flex;
+    padding-right: 25px;
+}
+
+#header .navbar-icons .icons-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+#BarIcon {
+    display: none;
+    align-self: center;
+}
+
+header #navbar .fa-circle-xmark {
+    display: none;
+}
+
+#header .navbar-icons i {
+    font-size: 22px;
+}
+
+.icons-box:nth-child(2)::before {
+    content: '|';
+    position: absolute;
+    left: -16px;
+    color: #CCD6E3;
+    font-size: 36px;
+}
+
+#header .navbar-icons .icons-box:hover {
+    background-color: #3368C6;
+    color: white;
+}
+
+/* side bar  */
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:white;
+    padding-top: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    font-weight: 700;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-list li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar-list li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-list li a:hover {
+    color: black
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black
+    
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-out;
+    z-index: 200;
+}
+
+/* Show sidebar and overlay */
+.sidebar-show {
+    transform: translateX(0);
+}
+
+.overlay-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive styles */
+@media (min-width: 992px) {
+    .sidebar, .overlay {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbar {
+        display: none;
+    }
+}
+
+/* end side bar */
+
+/* end: header and navbar */
+
+
+/* hero section */
+#hero {
+    background-image: url("/images/hero1.png");
+    height: 95vh;
+    background-size: cover;
+    background-position: top 25% right 0;
+    background-repeat: no-repeat;
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18%;
+    border-radius: 32px;
+    color: white;
+}
+
+#hero .social-link p {
+    text-transform: uppercase;
+    font-weight: 650;
+    font-size: 15px;
+}
+
+#hero .social-link p:hover {
+    color: #0b204e;
+}
+
+#hero .hero-headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero #hero-subheading {
+    padding: 4px 25px;
+    border-radius: 32px;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: -60px;
+    margin-bottom: 15px;
+}
+
+#hero h3 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+#hero h1 {
+    font-size: 80px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#hero .hero-headings .buttons {
+    color: white;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 32px;
+    font-weight: 500;
+}
+
+#hero .hero-headings .buttons:first-child {
+    background: transparent;
+    border: white 2px solid;
+    margin-right: 10px;
+}
+
+#hero .hero-headings .buttons:first-child:hover {
+    background-color: white;
+    color: black;
+}
+
+#hero .hero-headings .buttons:nth-child(2) {
+    background-color: #3368C6;
+    border: none;
+}
+
+#hero .hero-headings .buttons:nth-child(2):hover {
+    background-color: #031b4e;
+}
+
+#hero .hero-headings .buttons:hover .external-file {
+    animation: fly 1.3s ease-in-out;
+}
+
+/* end: hero section */
+
+
+/* external file icon and animation */
+.external-file {
+    margin-left: 12px;
+}
+
+@keyframes fly {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(20px, -20px);
+        opacity: 0;
+    }
+}
+
+/* end: external file icon and animation */
+
+/* cards */
+.card-containder {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.card {
+    background-color: #2b63c0;
+    color: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 400px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(247, 242, 242, 0.1);
+    position: relative;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    border-bottom: 1px solid rgba(61, 64, 73, 0.5);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.card-content p {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.card-content .card-note {
+    text-align: left;
+    font-size: 15px;
+    display: flex;
+    gap: 18px;
+}
+
+.card:nth-child(2) {
+    background-color: #0b204e;
+}
+
+.card:nth-child(2) button {
+    padding: 12px 28px;
+}
+
+.card:nth-child(3) {
+    background-image: url(/images/card3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* end: cards */
+
+/* about card in homepage */
+.about-card {
+    height: 90vh;
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    background-color: white;
+    border-radius: 32px;
+}
+
+.about-card img {
+    width: 50%;
+    height: 100%;
+    border-radius: 32px 32px 0 0;
+}
+
+.about-card .about-card-content {
+    margin-top: 62px;
+    margin-left: 40px;
+    margin-right: 45px;
+    overflow-y: scroll;
+}
+
+.about-card .about-card-content span {
+    opacity: .75;
+    font-weight: 500;
+}
+
+.about-card .about-card-content::-webkit-scrollbar {
+    display: none;
+}
+
+.about-card .about-card-content .heading-aboutus {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.about-card .about-card-content .about-inner {
+    margin-left: 40px;
+}
+
+.about-card .about-card-content .about-inner .about-inner-row {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-card .about-card-content .about-inner .about-inner-row img {
+    height: 100px;
+    width: 100px;
+    background-color: #3368C6;
+    border-radius: 50%;
+    margin-right: 25px;
+    align-self: baseline;
+    padding: 15px;
+}
+
+.about-card .about-card-content .about-inner #aboutusimg2 {
+    width: 100%;
+    height: 50%;
+    border-radius: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+
+/* end: about card in homepage */
+
+/* Marquee text */
+marquee {
+    color: white;
+    font-size: 90px;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #4c31e6, 1px -1px 0 #4244e2, -1px 1px 0 #3162e9, 1px 1px 0 #4251da;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 32px 0 32px 0;
+
+}
+
+marquee .plussign {
+    color: black;
+}
+
+marquee .marquee-text:hover {
+    color: #051029;
+    transition: .4s ease-in-out;
+}
+
+/* End: Marque text */
+
+
+
+/* testimonials */
+.testimonial {
+    margin-bottom: 32px;
+}
+
+.testimonial .btn-smLight {
+    background-color: white;
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+.testimonial .testimonial-card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    transition: 6s ease;
+
+}
+
+.testimonial .testimonial-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.testimonial .testi-headingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.testi-headingBox h4 {
+    font-size: 75px;
+}
+
+.testi-headingBox .controller-btns button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 28px;
+    transition: .4s ease;
+}
+
+.testi-headingBox .controller-btns button:hover {
+    background-color: #3368C6;
+    color: white;
+}
+
+.review-card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-right: 25px;
+    background-color: white;
+    padding: 35px;
+    gap: 15px;
+    flex-shrink: 0;
+
+}
+
+.review-card .client-rating {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.review-card .client-details {
+    display: flex;
+    align-items: center;
+}
+
+.review-card .client-details img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 25px;
+    align-self: baseline;
+}
+
+.review-card p {
+    font-size: 17px;
+    font-weight: 550;
+    opacity: .6;
+}
+
+.review-card .client-details span {
+    opacity: .8;
+    font-size: 12px;
+    color: #051029;
+
+}
+
+.review-card .client-details .clientName {
+    font-size: 16px;
+    font-weight: 550;
+    opacity: 1;
+}
+
+/* End: Testimonials */
+
+/* sign up and subscribe card */
+.signup-Subscribe {
+    height: 70vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.signup-Subscribe-wrappers {
+    width: 49%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 40px;
+    border-radius: 32px;
+}
+
+/*---------------- this is for signup ----------------------------------*/
+.signup-box {
+    background-image: url(images/signupimg.jpg);
+}
+
+.signup-box:hover .btn-smLight {
+    background-color: white;
+    color: #031B70;
+}
+
+.signup-box .btn-smLight {
+    color: white;
+    background: transparent;
+    font-weight: 700;
+    border: 1px solid white;
+}
+
+.signup-box .btnDark {
+    padding: 12px 36px;
+    font-weight: 300;
+    background-color: white;
+    color: black
+}
+
+/* -----------------------signup ends here -------------------------------------------------*/
+
+/* ----------------------Email subscribe------------------------------------ */
+.signup-Subscribe .email-box {
+    background-image: url(images/emailsubscribe.jpg);
+}
+
+.email-box .heading-email {
+    display: flex;
+    align-items: center;
+    font-size: 2.3em;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.email-box img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 25px;
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.email-box .input-email {
+    display: flex;
+}
+
+.email-box .input-email input {
+    height: 50px;
+    width: 45%;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    flex-grow: .5;
+
+}
+
+.email-box .input-email .btnDark {
+    height: 50px;
+    flex-grow: 0;
+}
+
+
+/*---------------------- Email subscribe ends here  -----------------------------------------*/
+
+/* End: sign up and subscribe card  */
+
+
+/* footer */
+
+
+footer {
+    display: flex;
+    gap: 40px;
+    height: auto;
+    position: relative;
+    background-color: white;
+    padding: 50px 32px;
+    background-image: url(/images/steto-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center bottom -30px;
+}
+
+
+
+footer .footer-col1 {
+    width: 40%;
+    display: flex;
+    background: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .footer-col1 .logo {
+    margin-left: 0;
+}
+
+footer .footer-col1 .social-icons {
+    font-size: 20px;
+    border-radius: 50%;
+    border: .5px solid #051029;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+footer .footer-col1 .social-icons:hover {
+    color: white;
+    background-color: #051029;
+}
+
+footer .footer-col2 {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+
+footer .footer-col2 h3 {
+    font-size: 30px;
+    color: #051029;
+}
+
+.footer-col2 .row1 {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-col2 .row1 .row1-columns {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    font-weight: 500;
+
+}
+
+.footer-col2 .row1 .row1-columns span {
+    opacity: .8;
+}
+
+.footer-col2 .row1 .row1-columns:nth-child(1) span:hover {
+    opacity: 1;
+    color: #3162e9;
+}
+
+
+.row1 .row1-columns .subHeading {
+    color: #3162e9;
+    text-transform: capitalize;
+}
+
+.footer-col2 .footer-terms {
+    display: flex;
+    justify-content: space-between;
+    opacity: .8;
+
+}
+
+
+
+/* media queries */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    header .btnDark {
+        display: none;
+    }
+
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card {
+        background-color: #2b63c0;
+        color: white;
+        border-radius: 20px;
+        padding: 25px;
+        width: 300px;
+        height: 300x;
+    }
+
+    .card-containder {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .about-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 32px 32px 0 0;
+    }
+
+    .about-card .about-card-content span {
+        opacity: 1;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-left: 10px
+    }
+
+    .signup-Subscribe {
+        gap: 25px;
+        flex-direction: column;
+        margin-top: 40px;
+        height: auto;
+    }
+
+    .signup-Subscribe-wrappers {
+        width: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        height: 300px;
+
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    footer .footer-col1 {
+        margin-top: 30px;
+    }
+
+    footer .footer-col2 h3 {
+        font-size: 24px;
+        color: #051029;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 32px;
+        margin-left: 28px;
+    }
+
+    footer .footer-col2 {
+        margin-top: 36px;
+    }
+
+}
+
+
+@media (min-width:767px) and (max-width:991px) {
+
+    body {
+        padding: 0;
+    }
+
+    header .btnDark {
+        display: none;
+    }
+
+    /* for side bar */
+    #navbar .hidesidebar li {
+        display: none;
+    }
+    #BarIcon{
+        display:initial
+    }
+
+    /* side bar end */
+    #hero h3 {
+        font-size: 36px;
+        font-weight: 500;
+
+    }
+
+    #hero .hero-headings {
+        position: sticky;
+    }
+
+    #hero #hero-subheading {
+        font-weight: 500;
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+        font-weight: 800;
+        margin-bottom: 40px;
+    }
+
+    #hero .hero-headings .buttons {
+        height: 36px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+        /* Adjusted or removed margin-right */
+    }
+
+    .card-containder {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+
+    .card {
+        padding: 16px;
+        width: 360px;
+        font-size: 16px;
+        margin: 0 15px
+    }
+
+    .card-header h2 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .about-card {
+        flex-direction: column;
+        border-radius: 32px;
+        height: auto;
+    }
+
+    .about-card img {
+        width: 100%;
+    }
+
+    .testi-headingBox h4 {
+        font-size: 68px;
+    }
+
+    .review-card {
+        position: relative;
+        width: 320px;
+    }
+
+    .signup-Subscribe {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .signup-Subscribe-wrappers {
+        width: 100%;
+        height: 280px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    footer .footer-col1 {
+        margin-top: 30px;
+    }
+
+    footer .footer-col2 h3 {
+        font-size: 24px;
+        color: #051029;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 32px;
+        margin-left: 28px;
+    }
+
+    footer .footer-col2 {
+        margin-top: 36px;
+    }
+
+}
+
+
+
+@media (min-width: 300px) and (max-width: 567px) {
+   
+    header .btnDark {
+        display: none;
+    }
+/* for side bar */
+    #header {
+        justify-content: flex-end;
+    }
+
+    #BarIcon {
+        display: initial;
+    }
+
+    #navbar li {
+        display: none;
+    }
+
+/* side bar end */
+    body {
+        padding: 0;
+    }
+
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+
+    #hero {
+        border-radius: 0;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero .social-link p {
+        display: none;
+    }
+
+    #hero .hero-headings .buttons:nth-child(1) {
+        display: none;
+    }
+
+    #hero #hero-subheading {
+        padding: 4px 20px;
+        font-weight: 300;
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+
+    #hero .hero-headings .buttons:nth-child(2) {
+        font-weight: 400;
+        font-size: 12px;
+        padding: 8px;
+        margin-top: 0;
+    }
+
+    #hero h1 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 4px;
+    }
+
+    #hero h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+
+    .card-containder {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        width: 300px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .about-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-card img {
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .about-card .about-card-content .about-inner {
+        margin-left: 0;
+    }
+
+    .about-card .about-card-content .heading-aboutus {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .about-card .about-card-content .about-inner .about-inner-row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    marquee {
+
+        font-size: 40px;
+        font-weight: 500;
+
+    }
+
+    .review-card {
+        width: 280px;
+        height: auto;
+        margin-right: 25px;
+        background-color: white;
+        padding: 32px;
+        gap: 15px;
+        flex-shrink: 0;
+    }
+
+    .testi-headingBox h4 {
+        font-size: 28px;
+    }
+
+    .testi-headingBox .controller-btns button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .signup-Subscribe {
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+    }
+
+    .signup-Subscribe-wrappers {
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        padding: 20px 0 20px 15px;
+
+    }
+
+    .signup-box .btn-smLight {
+        font-weight: 500;
+        padding: 12px;
+    }
+
+    .signup-box .btnDark {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+
+    .email-box .input-email {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .email-box .input-email input {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+
+
+    footer {
+        flex-direction: column;
+
+    }
+
+    footer .footer-col2 h3 {
+        font-size: 20px;
+        color: #051029;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 28px;
+        margin-left: 28px;
+    }
+
+    footer .footer-col1 {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .footer-col2 .row1 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .footer-col2 .row1 .row1-columns {
+        flex-direction: column;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    .footer-col2 .row1 .row1-columns span {
+        opacity: .8;
+        font-size: 14px;
+    }
+
+    .footer-col2 .footer-terms {
+        flex-direction: column;
+        opacity: .8;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 568px) and (max-width: 766px) {
+    body {
+        padding: 0;
+    }
+
+    header .btnDark {
+        display: none;
+    }
+
+    /* for side bar */
+    #header {
+        justify-content: flex-end;
+    }
+
+    #BarIcon {
+        display: initial;
+    }
+
+    #navbar li {
+        display: none;
+    }
+
+    /* side bar end */
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    #hero {
+        border-radius: 0;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero .social-link p {
+        display: none;
+    }
+
+    #hero .hero-headings .buttons:nth-child(1) {
+        display: none;
+    }
+
+    #hero #hero-subheading {
+        padding: 4px 20px;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    #hero .hero-headings .buttons:nth-child(2) {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    #hero h3 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .card-containder {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        width: 320px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .about-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-card img {
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .about-card .about-card-content .about-inner {
+        margin-left: 0;
+    }
+
+    .about-card .about-card-content .heading-aboutus {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .about-card .about-card-content .about-inner .about-inner-row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    marquee {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .review-card {
+        width: 280px;
+        height: auto;
+        margin-right: 25px;
+        background-color: white;
+        padding: 32px;
+        gap: 15px;
+        flex-shrink: 0;
+    }
+
+    .testi-headingBox h4 {
+        font-size: 28px;
+    }
+
+    .testi-headingBox .controller-btns button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .signup-Subscribe {
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+    }
+
+    .signup-Subscribe-wrappers {
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        padding: 20px 0 20px 15px;
+    }
+
+    .signup-box .btn-smLight {
+        font-weight: 500;
+        padding: 12px;
+    }
+
+    .signup-box .btnDark {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+
+    .email-box .input-email {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .email-box .input-email input {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .footer-col2 h3 {
+        font-size: 20px;
+        color: #051029;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 28px;
+        margin-left: 28px;
+    }
+
+    footer .footer-col1 {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .footer-col2 .row1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-col2 .row1 .row1-columns {
+        flex-direction: column;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    .footer-col2 .row1 .row1-columns span {
+        opacity: .8;
+        font-size: 14px;
+    }
+
+    .footer-col2 .footer-terms {
+        flex-direction: column;
+        opacity: .8;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 299px) {
+    .btnDark{
+        font-size: 12px;
+    }
+    header .btnDark {
+        display: none;
+    }
+
+    /* for side bar */
+    #header {
+        justify-content: flex-end;
+    }
+
+    #BarIcon {
+        display: initial;
+    }
+
+    #navbar li {
+        display: none;
+    }
+
+    /* side bar end */
+    body {
+        padding: 0;
+    }
+
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+        height: auto;
+    }
+
+    #hero {
+        border-radius: 0;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero .social-link p {
+        display: none;
+    }
+
+    #hero .hero-headings .buttons:nth-child(1) {
+        display: none;
+    }
+
+    #hero #hero-subheading {
+        padding: 4px 16px;
+        font-weight: 300;
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    #hero .hero-headings .buttons:nth-child(2) {
+        font-weight: 400;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #hero h1 {
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 0px;
+    }
+
+    #hero h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    .card-containder {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .card {
+        font-size: 12px;
+        width: 100%;
+
+    }
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .about-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-card img {
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .about-card .about-card-content .about-inner {
+        margin-left: 0;
+    }
+
+    .about-card .about-card-content .heading-aboutus {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .about-card .about-card-content .about-inner .about-inner-row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    marquee {
+        font-size: 40px;
+    }
+
+    .review-card {
+        width: 280px;
+        height: auto;
+        padding: 20px;
+    }
+    .testi-headingBox h4 {
+        font-size: 18px;
+    }
+    .review-card {
+        width: 200px;
+        height: auto;
+        padding: 20px;
+    }
+    .testi-headingBox .controller-btns button {
+        width: 25px;
+        height: 25px;      
+        font-size: 14px;
+      
+    }
+
+    .signup-Subscribe {
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+
+    .signup-Subscribe-wrappers {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
+    .signup-Subscribe-wrappers h1{
+     font-size: 16px;
+    }
+    .signup-box .btnDark {
+        padding: 8px 20px;
+        font-weight: 300;
+    }
+    .email-box .heading-email {
+        font-size: 1.3em;
+        font-weight: 500;
+        line-height: 1;
+    }
+    .email-box .input-email {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .email-box .input-email .btnDark {
+        height: 36px;
+        font-size: 11px;
+        width:90%;
+
+    }
+    .email-box .input-email input {
+        height: 36px;
+        width:90%;
+        padding: 0;
+        
+    }
+
+
+  
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+    footer .footer-col2 h3 {
+        font-size: 16px;
+        color: #051029;
+    }
+
+    footer .footer-col1 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer .footer-col2 {
+        width: 100%;
+    }
+    .footer-col2 .row1 .row1-columns {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        font-weight: 500;
+        display: none;
+    }
+    footer .footer-col1 .social-icons {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+   
+}
